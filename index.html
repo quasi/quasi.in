@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Abhijit 'quasi' Rao</title>
+    <style type="text/css" media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        background-image : url('bg.jpg');
+        background-size : cover;
+      }
+      #info {
+        position : absolute;
+        bottom : 10px;
+        right : 10px;
+        background-color: rgba(0,0,0,0.5);
+        color : #fff;
+        border-radius : 4px;
+        border : 1px solid #000;
+        padding : 10px;
+        font-family : "helvetica neue", helvetica, arial;
+        font-weight : 300;
+        font-size : 0.8em;
+      }
+      #info H1 {
+        margin-top:0;
+        font-weight:300;
+        font-size : 1.4 em;
+      }
+      #info P {
+        margin-bottom:0;
+        font-size: 0.7em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+      }
+      #info P>a {
+        text-decoration: none;
+        color: #fff;
+      }
+      #info P>a:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: black;
+        border:1px solid red;
+      }
+      #info H1>span {
+        margin-left : 14px;
+        font-size :0.7em;
+        color : red;
+        font-style:italic;
+      }
+
+      @media all and (max-width: 480px), handheld and (orientation: portrait)
+      {
+        body {
+          background-image : url('bgp.jpg');          
+        }
+        #info {
+          width : 100%;
+          border: none;
+          border-radius: 0;
+          bottom: 0;
+          right: 0;
+          border-top: 4px solid rgba(255,0,0,0.4);
+        }
+      }
+      @media all and (min-width: 480px) and (max-width: 1024px), handheld and (orientation: landscape)
+      {
+        body {
+          background-image : url('bgs.jpg');          
+        }
+        #info {
+          width : 50%;
+        }
+      }
+      @media all and (min-width: 1025px)
+      {
+        body {
+          background-image : url('bg.jpg');          
+        }
+        #info {
+          width : 33%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="info" >
+      <h1>Abhijit Rao <span>quasi</span></h1>
+      <p><a href="http://quasilabs.com/">Programmer</a>, <a href="http://flickr.com/photos/quasi/">Photographer</a>, <a href="http://blog.quasi.in">Painter</a>, <a href="http://tripr.in/people/quasi/">Traveler</a>, <a href="http://blog.quasi.in">Dreamer</a></p>
+    </div>
+  </body>
+</html>

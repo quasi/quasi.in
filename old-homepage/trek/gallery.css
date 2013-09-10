@@ -1,0 +1,11 @@
+a{text-decoration:none}
+
+A:hover {color: red; text-decoration:underline}
+A:link {color: blue}
+A:active {color: green}
+
+H1 {color:black;font-family:Comic Sans MS,Cursive, Arial}
+H3 {color:black; font-family:Comic Sans MS, Cursive, Arial}
+H4 {color:green}
+
+BODY {BACKGROUND:url(images/oldpaper.gif); COLOR: white; MARGIN: 20px; FONT-FAMILY:Verdana, Arial, sans-serif; FONT-SIZE: 9pt; LINE-HEIGHT: 14pt}

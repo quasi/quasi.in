@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Compression Comparisions</TITLE>
+<META NAME="Author" CONTENT="Quasi">
+<META NAME="Keywords" CONTENT="comression, software, test, quasi, zip, ace, rar, bzip2">
+<META NAME="Description" CONTENT="compression software test">
+
+<style>
+		<!-- BODY{FONT-Family:"courier new, Verdana,Tahoma"; Font-size:10pt;color:black} -->
+		<!-- A{TEXT-DECORATION: none;font-family:arial,verdana,tahoma;font-size:9pt;color:gray;LETTER-SPACING:0.1em;} -->
+		<!-- A:link{COLOR: blue; TEXT-DECORATION: none} -->
+		<!-- A:visited{color:#006699;font-weight:bold} -->
+		<!-- A:hover{COLOR: blue; TEXT-DECORATION: underline;font-weight:bold} -->
+		<!-- .tiny{font-family:arial,verdana,tahoma;font-size:8pt;color:black;} -->
+</style>
+
+</HEAD>
+<BODY>
+<BR><CENTER><IMG SRC="res/compress-l.gif" WIDTH="100" HEIGHT="100" BORDER=0><IMG SRC="res/compress.png" WIDTH="251" HEIGHT="98" BORDER=0><IMG SRC="res/compress-r.gif" WIDTH="100" HEIGHT="100" BORDER=0></CENTER><BR>
+<hr><br>
+<P align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Everyone uses compression software.  There are several compression software and they all claim that they are the best.  They provide charts which show themselves as winners.  So I decided to test them myself.  I generally use Winzip on windows and bzip2 on Linux 'cause they both are free.
+
+<br><BR><CENTER><H4>the software tested are</H4></CENTER>
+<TABLE width=90% align=center cellpadding=5 bgcolor=#FFFFCC>
+<TR>
+<TD>
+<DL>
+	<DT><U><B>WinZip 8.00</B></U>
+	<DD>This is by far the most used windows archiver.  As zip is the predominant format used for compression it is natural that people use winzip.  Also they have full version for indefinite trial use.  The interface is intutive and very easy.  Integration with the shell makes creating a archive a breeze.  It also supports .tar & .tgz unix files.
+	<br>WEB : <A HREF="http://www.winzip.com">www.winzip.com</A>
+	<DT><U><B>WinAce 2.03</B></U>
+	<DD>This is a slightly newish format.  But this archiver is supposed to outperform most in compression.  It has a jazzy cool xp style interface.  Supports a lot of formats.  Has shell integration for ease of use.
+	<br>WEB : <A HREF="http://www.winace.com">www.winace.com</A>
+	<DT><U><B>WinRAR 3.00 beta</B></U>
+	<DD>RAR was my favourite archiver during Dos times.  It had a cool 'curses like interface.  Now the windows version is also very cool.  It has all that most would want.  It is slightly on the slower side for its maximum setting but it has among the best compression rations.
+	<br>WEB : <A HREF="http://www.rarsoft.com">www.rarsoft.com</A>
+	<DT><U><B>PKZIP 2.50</B></U>
+	<DD>Pkzip was the standard zip software during Dos times.  This is the Dos version and I included it in these tests only as a test to the compression algorithm.  It does not suppost long filenames.  PK software have a windows version too, but I do not have it.  sorry.
+	<DT><U><B>Jar 1.02</B></U>
+	<DD>Jar from the ARJwallas gave the best compression during Dos days.  It was also the slowest and used maximum memory.
+	<DT><U><B>bzip2 1.0.0</B></U>
+	<DD>The new standard for the Linux world.  For this test I used a win32 binary.  So it may actually much faster on its native Linux.  But we can compare the compression.  NOTE: It does not support long filenames and it does not support archiving.  I had to use PCTAR to archive the files into a tarball and then compress it.
+	<DT><U><B>gzip 1.2.4</B></U>
+	<DD>The standard for the *nix world.  For the test I used a win32 binary.  NOTE: It does not support long filenames and it does not support archiving.  I had to use PCTAR to archive the files into a tarball and then compress it.
+</DL>
+</TD>
+</TR>
+</TABLE>
+
+<br clear=all><br><CENTER><H4>Machine Used for Testing</H4></CENTER>
+<TABLE align=center cellpadding=5 cellspacing=15 bgcolor=silver>
+<TR bgcolor=white>
+<TD>
+<FONT face="verdana"><CENTER>AMD Duron 1200MHz<br>
+DFI mobo with a VIA Apollo KL133 chipset<br>
+120Mb SDRAM (133Mhz)<br>
+Segate U6 40Gb ATA100 UDMA5 HDD<br></CENTER></FONT>
+</TD>
+</TR>
+</TABLE>
+
+
+<br clear=all><br>
+<hr>
+<br clear=all><br>
+<CENTER><A name="test1"><B><FONT style="border:groove;border-color:gold;padding:8px">t e s t &nbsp;&nbsp;o n e</B> &nbsp;&nbsp;:: Data Set : Mostly ASCII Text ~31.67Mb</FONT></A></CENTER>
+<br clear=all><CENTER>(all software with their maximum compression settings)</CENTER>
+<BR clear=all><br>
+<TABLE border=0 cellpadding=10 cellspacing=10 bgcolor=#D3D3D3 align=center width=90%>
+<TR>
+	<TD class=tiny style="border-bottom:solid 3px "><IMG SRC="res/bar-time.png" WIDTH="395" HEIGHT="10" BORDER=0> 79 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="465" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>WinRAR 3.00b</U></B> time: <B><U>79 sec</U></B> compressed size: <B><U>7,452,728 bytes</U></B> percentage of orignal: <B><U>22.44%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="310" HEIGHT="10" BORDER=0> 62 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="10" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="455" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>WinAce 2.03</U></B> time: <B><U>62 sec</U></B> compressed size: <B><U>8,028,226 bytes</U></B> percentage of orignal: <B><U>24.17%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="220" HEIGHT="10" BORDER=0> 44 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="12" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="453" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>Jar 1.02 </U></B> time: <B><U>44 sec</U></B> compressed size: <B><U>8,101,213 bytes</U></B> percentage of orignal: <B><U>24.39%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="240" HEIGHT="10" BORDER=0> 48 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="25" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="440" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>bzip2 1.0.0</U></B> time: <B><U>48 sec</U></B> compressed size: <B><U>8,834,400 bytes</U></B> percentage of orignal: <B><U>26.59%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="65" HEIGHT="10" BORDER=0> 13 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="45" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="420" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>gzip 1.2.4</U></B> time: <B><U>13 sec</U></B> compressed size: <B><U>9,948,285 bytes</U></B> percentage of orignal: <B><U>29.95%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="35" HEIGHT="10" BORDER=0> 7 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="46" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="419" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>Pkzip 2.50</U></B> time: <B><U>07 sec</U></B> compressed size: <B><U>9,953,537 bytes</U></B> percentage of orignal: <B><U>29.97%</U></B></TD>
+</TR>
+<TR>
+	<TD class=tiny><IMG SRC="res/bar-time.png" WIDTH="70" HEIGHT="10" BORDER=0> 14 sec<br clear=all><IMG SRC="res/bar-green.png" WIDTH="135" HEIGHT="20" BORDER=0><IMG SRC="res/bar-red.png" WIDTH="47" HEIGHT="20" BORDER=0><IMG SRC="res/bar-grey.png" WIDTH="418" HEIGHT="20" BORDER=0><br clear=all>software: <B><U>Winzip 8.0</U></B> time: <B><U>14 sec</U></B> compressed size: <B><U>10,006,103 bytes</U></B> percentage of orignal: <B><U>30.12%</U></B></TD>
+</TR>
+</TABLE>
+<br clear=all>
+<hr style="groove">
+<br clear=all>
+<hr>
+<br clear=all>
+<CENTER>Quasi &copy; 2002</CENTER>
+</BODY>
+</HTML>

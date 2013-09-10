@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- Author  : Abhijit Rao -->
+<!-- Date    : ?? ??? 2000 -->
+<!-- Revised : 29 Aug 2002 -->
+
+<html>
+<head>
+
+<title>Installation - Linux GNU/Debian</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK href="res/inst.css" type="text/css" rel="style sheet">
+<STYLE TYPE="text/css">
+        <!-- @import url(res/inst.css); -->
+		<!-- .initial2{font-size:8pt;background:#CCFFCC;color:#000000;padding:2px} -->
+</STYLE>
+
+<script>
+<!--
+function change(color){
+var el=event.srcElement
+if (el.tagName=="INPUT"&&el.type=="button")
+event.srcElement.style.backgroundColor=color
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#FFFFFF">
+<table width="95%" border="0" height="248" name="main" cellpadding=10>
+  <tr> 
+    <td width="20%" height="63">&nbsp;&nbsp;</td>
+    <td colspan="3" width="80%" height="60"><img src="res/os.gif" width="300" height="40" align="right"></td>
+  </tr>
+  <tr> 
+    <td rowspan="3" width="20%" valign=top align=left> <font face="Arial, Helvetica, sans-serif" style="FONT-SIZE:9pt"> 
+      <A HREF="soft.html">Main Page</A><BR>
+      <BR>
+      Linux - RedHat<br>
+      <FONT COLOR="red"><I><B>Linux - GNU/Debian</B></I></FONT><BR>
+      <BR>
+      Unix - FreeBSD<BR>
+      <BR>
+      <A HREF="inst_dos622.html">MS Dos 6.22</A><br>
+      MS Windows 3.11<br>
+      MS Windows 95<br>
+      MS Windows 98<br>
+      MS Windows NT<br>
+      MS Windows 2000<BR>
+      <BR>
+      QNX<BR>
+      BeOS<BR>
+      </font><br><br>
+	  <FORM onMouseover="change('white')" onMouseout="change('#CCFFCC')"><INPUT TYPE="button"  class="initial2" VALUE="b a c k" onClick="history.go(-1)"></FORM>
+	  </td>
+    <td colspan="3" width="80%" height="25"><img src="res/bar.jpg" width="400" height="20" align="right"> 
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" width="80%" height="65"> 
+      <div align="right"> 
+        <pre><font face="Arial, Helvetica, sans-serif" color="#0066CC" style="font-size:22pt">L I N U X &nbsp;-&nbsp; G N U / D e b i a n</font></pre>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" width="80%" height="*"  bgcolor="#EEEEEE"> <BR>
+      <UL>
+        <LI><A HREF="#intro" class=smalllink>Introduction</A> 
+        <LI><A HREF="#hist" class=smalllink>History</A> 
+        <LI><A HREF="#why" class=smalllink>Why</A> 
+        <LI><A HREF="#whynot" class=smalllink>Why Not?</A> 
+        <LI><A HREF="#inst" class=smalllink>Installation</A> 
+        <LI><A href="#tips" class=smalllink>Tips & Tricks</A> 
+      </UL>
+      <BR>
+      <BR>
+      <BR>
+      <A Name="intro"></a> <FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>Introduction</H4>
+      &nbsp;&nbsp;This is the official distribution of the GNU organisation.  Although not as easy to install as some of the others, it is famous for its stability.  It also prefers software with GNU public licence because of which popular software like vim & pine do not get installed by default.
+	  <BR>
+      <BR>
+      <BR>
+      </font><A Name="hist"></a><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>History</H4>
+      &nbsp;&nbsp;{coming soon}<BR>
+      <BR>
+      </font><A Name="why"></a><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>Why?</H4>
+      &nbsp;&nbsp;If you want to put up a linux server, this is your distribution.  It has rock solid stability.  The packaging system is excellent once you get used to it.  Geting regular updates directly from ftp sites is a breeze.  The software is updated on-the-fly with is good news for server admins.
+	  <BR>
+      <BR>
+      </font><A Name="whynot"></a><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>Why Not?</H4>
+      &nbsp;&nbsp;If this is your first linux installation, may be you shoul go in for RedHat or SuSE.  Once you are used to linux you can come to Debian.  But this is just a suggestion.  You can go ahead and try this for the first time too.
+	  <BR>
+      <BR>
+      <BR>
+      </font><A Name="inst"></a><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>How to do it?</H4>
+      <UL>
+		<LI>Boot through the CD (more about booting here)
+		<LI>Just press 'enter' to begin; it will load the root image and start the install process.
+		<LI>Configure the keyboard; US QWERTY, the first choice should do for most.
+		<li>Then initialise and activate the swap partition (more on partitioning here).  It is better and faster to have a separate swap partition for linux.  You could have a swap file in the linux partition itself, but it is not recommended.  You should have already partitioned the hard disk with the fdisk utility provided with windows or dos.  It is found in the c:\windows\command directory.  It is easier to use then the Unix fdisk.
+		<li>next initialise the linux native partition.
+		<li>during the above steps you will be asked a few questions :<ul>
+			<li>do you want to retain 2.0 compatibility? - if you are doing a new install you can say no here
+			<li>shall I skip the bad block scan? - If you do not have a very old hard disk you can say no here
+			<li>asks for the mount point.  Take the default which is '/' for the linux partition
+			</ul>
+		<li>Next is to install the kernel and modules : select source as the cdrom drive. for the path just press enter and for the distro select the default.
+		<li>Then you have to configure the device drivers and modules.  If you have any special driver which come on the floppy you should load them here.  If not then skip the floppy option.  Then select all the drivers from the list that you feel you need.  A few good choices are : fs->vfat; music->soundcore; net->ppp if you are using dialup or you ethernet NIC card's driver.  Special hardware support drivers like SCSI etc.
+		<li>then configure hostname : give any name you like
+		<li>Install the base system : 'enter' for path; default distro.
+		<li>configure the base system : timezone
+		<li>reboot the system, unless you want to install LILO.  I would recommend using loadlin in the beginning.  (more about loadlin and booting linux is here)
+		<li>after rebooting, when you boot linux for the first time, it asks for a few questions, I chose the following answers.<ul>
+			<li>MD5 password : yes
+			<li>Shadow : yes
+			<li>remove pcmcia : yes
+			<li>install packages through ppp : no
+			</ul>
+		<li>In between it will ask you for root password. (more about choosing passwords here)
+		<li>Then it will scan for packages.  If you have more than one CD's get them scanned here.  It will prompt you for them.
+		<li>Next Select the Simple method for installing packages.
+		<li>select the type of system & the components you want.
+		<li>relax while it installs the packages.
+		<li>with installation debian also sets up the packages : you may have to answer some questions with regard to particular packages.
+		<BR>
+        <BR>
+        <BR>
+      </ul>
+      </font><A Name="tips"></a><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"></font><FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt"> 
+      <H4>Tips & Tricks</H4>
+      <OL>
+		<li>Read CAREFULLY every dialogue that the installation program puts up.
+      </OL>
+      </font> </td>
+  </tr>
+</table>
+<br clear=all>
+<br>
+<br>
+<HR align=right width=85%>
+<P align=right>&copy; Quasi 2000-2002</p>
+</body>
+</html>

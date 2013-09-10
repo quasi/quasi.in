@@ -1,0 +1,8 @@
+a{text-decoration:none}
+A:hover {text-decoration:underline; color: red}
+A:link {color: white}
+A:active {color: silver}
+
+BODY {FONT-FAMILY: "Comic Sans MS", "Courier", "sans-serif"; FONT-SIZE: 1.em; LINE-HEIGHT: 1.4em; color:white}
+H1 {FONT-FAMILY: "Comic Sans MS", "Courier", "sans-serif"; color:silver}
+.quote{font-size:1.2em;font-family:verdana,arial,tahoma;color:white}

@@ -1,0 +1,10 @@
+A:hover {color: red;background-color:white}
+A:link {color: cyan}
+A:active {color: green}
+
+BODY {FONT-FAMILY: "courier", "Verdana", "Arial", "sans-serif"; margin:10px; color:silver}
+H1 {color: black; font-family:"Comic Sans MS", "Courier", "Arial"};
+.quote{font-size:0.9em;font-family:verdana,arial,tahoma;color:white}
+.vtiny{font-size:0.9em;font-family:arial,tahoma,verdana;color:white}
+.large{font-size:1.8em;font-family:"comic sans ms","courier";color:olive;text-decoration:underline}
+.spaced{font-size:0.9em;font-family:"sans-serif","courier","verdana";font-weight:bold;color:silver;LETTER-SPACING:0.5em}

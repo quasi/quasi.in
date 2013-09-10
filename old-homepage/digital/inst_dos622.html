@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Installation - Dos 6.22</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<LINK href="res/inst.css" type="text/css" rel="style sheet">
+<STYLE TYPE="text/css">
+        <!-- @import url(res/inst.css); -->
+		<!-- .initial2{font-size:8pt;background:#CCFFCC;color:#000000;padding:2px} -->
+</STYLE>
+
+<script>
+<!--
+function change(color){
+var el=event.srcElement
+if (el.tagName=="INPUT"&&el.type=="button")
+event.srcElement.style.backgroundColor=color
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<SCRIPT LANGUAGE="JavaScript">
+var ol_bgcolor="#990000";
+var ol_fgcolor="#CCCC00";
+var ol_textcolor= "#000000"; 
+</SCRIPT>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script language="JavaScript" src="../res/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+
+<table width="95%" border="0" height="248" name="main" cellpadding=10>
+  <tr> 
+    <td width="21%" height="63">&nbsp;&nbsp;</td>
+    <td colspan="3" width="79%" height="60"><img src="res/os.gif" width="300" height="40" align="right"></td>
+  </tr>
+  <tr> 
+    <td rowspan="3" width="21%" valign=top align=left> 
+      <font face="Arial, Helvetica, sans-serif" style="FONT-SIZE:9pt">
+		<A HREF="soft.html">Main Page</A><BR><BR>
+		Linux - RedHat<br>
+        <A HREF="inst_linux_db.html">Linux - GNU/Debian</A><BR><BR>
+		Unix - FreeBSD<BR><BR>
+        <FONT COLOR="red"><I><B>MS Dos 6.22</B></I></FONT><br>
+        MS Windows 3.11<br>
+        MS Windows 95<br>
+        MS Windows 98<br>
+        MS Windows NT<br>
+        MS Windows 2000<BR><BR>
+		QNX<BR>
+		BeOS<BR>
+		</font><br><br>
+	  <FORM onMouseover="change('white')" onMouseout="change('#CCFFCC')"><INPUT TYPE="button"  class="initial2" VALUE="b a c k" onClick="history.go(-1)"></FORM>
+    </td>
+    <td colspan="3" width="79%" height="25"><img src="res/bar.jpg" width="400" height="20" align="right"> 
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" width="79%" height="40"> 
+      <div align="right">
+        <font face="Arial, Helvetica, sans-serif" color="#0066CC" style="font-size:22pt">M i c r o S o f t &nbsp;&nbsp;D o s &nbsp;6.22</font>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" width="79%" height="*"  bgcolor="#EEEEEE">
+	<BR>
+	<UL>
+		<LI><A HREF="#intro" class=smalllink>Introduction</A>
+		<LI><A HREF="#hist" class=smalllink>History</A>
+		<LI><A HREF="#why" class=smalllink>Why</A>
+		<LI><A HREF="#whynot" class=smalllink>Why Not?</A>
+		<LI><A HREF="#inst" class=smalllink>Installation</A>
+		<LI><A href="#tips" class=smalllink>Tips & Tricks</A>
+	</UL>
+	<BR><BR><BR>
+
+	<FONT face="Courier New, Verdana, Helvetica" style="FONT-SIZE:11pt">
+		<A Name="intro"><H4>Introduction</H4>
+		&nbsp;&nbsp;MS Dos is that OS which made the PC revolution possible.  It is a 16bit OS from Microsoft.  It is easy very small and generally a gamers delight.  I cut my teeth on this simple OS.  Did my first bit of interrupt programming, changed the video modes, read the partition table, and generally had lots of fun.  I initially had a AMD386DX machine and MS Dos and Win 3.11 were the only ways to go, apart from the infant Linux.
+		<BR><BR><BR><A Name="hist"><H4>History</H4>
+		&nbsp;&nbsp;Microsoft brought over an existing OS, reworked it and released the first version of MS Dos in the mid 80's.  Initially it was a bare bones affair, but with time they added quite a few utilities to make it versatile.  The last release was 6.22.
+		<BR><BR><BR><A Name="why"><H4>Why?</H4>
+		&nbsp;&nbsp;The why's are not so relevant now as they used to be.  If you are new to computing and want to have loads of fun tinkering with the OS and the hardware, then Dos is your OS.  It also provides a good platform for which to write games easily.  Also if you have hardware which is 80386 or lower then you have hardly any other choice.  Apart from this Dos is extinct.
+		<BR><BR><BR><A Name="whynot"><H4>Why Not?</H4>
+		&nbsp;&nbsp;All the reasons excluding the above ;)
+		<BR><BR><BR><A Name="inst"><H4>How to do it?</H4>
+		<UL>
+			<LI>The MS Dos installation pack consists of 3 floppy diskettes.
+			<LI>The disk no.1 is <U><A HREF="javascript:void(0);" onmouseover="return overlib('The drive which can boot - start the OS');" onmouseout="return nd();"><FONT class=bk>bootable</FONT></A></U>.  You ensure that the <U><A HREF="javascript:void(0);" onmouseover="return overlib('It is the sequence in which the PC hardware looks for the boot drive.  So you have a choice of booting from the harddisk C:, CD romdrive, or the floppy drive A:. This sequence is chosen from the bios.  To enter bios press \'del\' when the computer just starts.');" onmouseout="return nd();"><FONT class=bk>boot sequence</FONT></A></U> in the bios is set to A,C; insert the diskette in the drive and restart the machine.
+			<LI>The machine will boot MSDos from the diskette and present you a prompt for the current date and time.  After you make changes to the date/time and/or enter you are dumped on a prompt like <U>a:></U>.  This is the default prompt for Dos and the 'a' signifies the drive which is current.  You can use the dos commands like "dir" etc. here to check the files listing etc. etc.
+			<LI>You can use the accompanying fdisk utility to <U><A HREF="javascript:void(0);" onmouseover="return overlib('Partitioning involves splitting the physical area of the hard disk into sections.  4 primary partitions are possible per harddisk.  If one of the partitions is of extended type, it can be further split into logical partitions');" onmouseout="return nd();"><FONT class=bk>partition</FONT></A></U> the disk before entering setup.
+			<LI>Start the installation by typing setup on the command prompt and pressing the return key.  You are assumed to have a new hard drive so setup asks to format it.
+			<LI>The installation is straight forward enough. Initially when you start the setup program, it asks for common configuration options.  Then it starts to copy the files and you are prompted for the next diskette as and when required.  
+			<LI>The machine is rebooted at the end and lo behold! you have a working machine!
+		</ul>
+		<BR><BR><BR><A Name="tips"><H4>Tips & Tricks</H4>
+		<OL>
+			<LI>You can replace the default <U>command interpreter</U> "<I>command.com</I>" with one from either <B>4Dos</B> or <B>Norton</B>.  They give a huge amount of additional functionality like coloured directory listing, tab key for auto completion.. etc.etc.
+			<LI>Typing <U>Help</U> on the command prompt will take you to the MSDos Help system where you will find comprehensive help as well as examples.  Use 'tab' to navigate the various topics.
+			<li>Use Smartdrive&trade; for disk cacheing - disk write in the background.
+		</OL>
+		</FONT>
+    </td>
+  </tr>
+</table>
+<br clear=all><br><br><HR align=right width=85%>
+<P align=right>&copy; Quasi 2000-2002</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+BODY
+{
+	COLOR: black; FONT-FAMILY: Verdana,Helvetica,Tahoma,Arial,sans-serif; BACKGROUND-COLOR: white; 
+}
+
+H4
+{
+	FONT-SIZE: 12pt; WORD-SPACING: 1em; COLOR: #999966; LETTER-SPACING: 0.5em; TEXT-ALIGN: left;  text-decoration:underline; MARGIN:4px; PADDING:3px;
+}
+
+H3
+{
+	FONT-WEIGHT: 600; FONT-SIZE: 8pt; FONT-FAMILY: Verdana,Helvetica,Tahoma,Arial,sans-serif
+}
+A:link {COLOR: blue; TEXT-DECORATION: none}
+A:visited {	COLOR: #339933; TEXT-DECORATION: none}
+A:active {	COLOR: #ffa500; background-color:yellow;}
+A:hover {COLOR: red; TEXT-DECORATION: underline}
+
+.bk{background:#9D9D9d;color:white;}
+.smalllink
+{
+	Font-size:9pt; Text-align:left; Font-Family:Courier,Verdana,Tahoma,sans-serif;";
+}

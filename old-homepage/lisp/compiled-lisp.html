@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>-=[Compiled Lisp]=-</TITLE>
+<META NAME="Author" CONTENT="quasi">
+<META NAME="Keywords" CONTENT="lisp, cmucl, compiled lisp">
+<META NAME="Description" CONTENT="Compiled Lisp is super fast.">
+
+<STYLE TYPE="text/css">
+		<!-- BODY {color: black; FONT-FAMILY: "verdana, Courier New, Times New Roman, sans-serif"; margin:25px} -->
+		<!-- .bor{border-bottom:solid 4px orange;font-weight:bold} -->
+</STYLE>
+
+</HEAD>
+
+<BODY>
+<H1>Compiled Lisp : Some Points</H1>
+<p align=right><A HREF="lisp.html">home</A>
+<p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes back I put a question on <A HREF="http://groups.google.com/groups?hl=en&lr=&group=comp.lang.lisp">comp.lang.lisp</A> about the nature of compiled lisp.  As I knew CMUCL was supposed to compile to native machine code.  So does gcc with C code.  The question, then, was to why is that people claimed that Lisp was slower than C.  I wanted to know what is fundamentally different in the way both the compilers compile.
+<p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I received excellent answers and examples about this query.  In my sincere effort to contribute to the Lisp community (for the benefit of the new comers like me) I decided to compile (grin) all that wisdom this page.  I cannot contribute in any other way as I too am a beginner and that too a part-timer.
+
+<p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The conclusion is that Lisp compilers <b>*can*</b> produce machine code comparable to the one produced by a C compiler.  However it requires optimizations which can be used wherever speed is critical.  The standard Lisp code has a number of safety checks which make fast high level programming possible.  So to develop equivalent applications in C takes <b>*much*</b> longer than in Lisp.  And you can use small part of the saved time to optimise the Lisp code to run almost as fast or faster than the C code.  Also some Lisp compilers allow inline assembly for further optimizations if so required.
+
+<p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I know there will be some who claim what's with all this speed crazy ness.  But if speed is *one* of the strengths of Lisp than why allow misinformation about it?  According to the explanations I got, seems like CL can beat the shit out of Java/C++ in runtime performance.  And C++ is often used for performance.
+
+<br><br>Thanks all, for sharing your knowledge/expertise<br><br>
+<TABLE class=bor>
+<TR>
+	<TD>Here's what Joe Marshall had to say</TD>
+</TR>
+</TABLE>
+<pre><span style="font-size:1.2em; font-family:courier new;line-height:1em">
+[...]HOWEVER, it is can be quite difficult to write `the same' code in Lisp and in C.  To give a very<br>small example, suppose you wrote function foo that `simply' added two numbers:
+
+<span style="color:olive">int foo (int left, int right)
+{
+  return left + right;
+}
+</span><span style="color:red">
+(defun foo (left right)
+  (+ left right))
+</span>
+The C code compiles to this:
+<span style="color:green">
+  push        ebp  
+  mov         ebp,esp 
+  mov         eax,dword ptr [right] 
+  mov         ecx,dword ptr [left] 
+  add         eax,ecx 
+  pop         ebp  
+  ret
+</span>
+And the Lisp code compiles to this:
+<span style="color:green">
+  push    ebp
+  mov     ebp,esp
+  push    edi
+  cmp     ecx,00002h
+  je      000F
+  call    near dword ptr [esi+0000010BCh]
+  push    dword ptr [ebp+0000Ch]
+  mov     eax,[ebp+00008h]
+  pop     edx
+  test    al,007h
+  jne     0025
+  test    dl,007h
+  jne     0025
+  add     eax,edx
+  jno     002B
+  sub     eax,edx
+  call    near dword ptr [esi+0000017FCh]
+  mov     ecx,0001
+  mov     esp,ebp
+  pop     ebp
+  ret
+</span>
+These are clearly different.  The reason is that although the C and the Lisp code superficially<br> resemble one another, the Lisp code is doing far more work.  These instructions:
+<span style="color:green">
+  cmp     ecx,00002h
+  je      000F
+  call    near dword ptr [esi+0000010BCh]
+</span>
+ensure that FOO is invoked with exactly two arguments.  The C code doesn't bother to check.
+
+These instructions:
+<span style="color:green">
+  test    al,007h
+  jne     0025
+  test    dl,007h
+  jne     0025
+</span>
+check whether both the arguments are fixnums.  If they are not, the out-of-line addition<br> operation is called.
+
+This instruction:
+<span style="color:green">
+  jno     002B
+</span>
+checks that the result did not overflow.
+
+Finally this instruction:
+<span style="color:green">
+  mov     ecx,0001
+</span>
+notifies the caller that a single value is being returned.
+
+The lisp code
+<span style="color:red">
+(defun foo (left right)
+  (+ left right))
+</span>
+is closer to this C code:
+<span style="color:olive">
+Object * foo (int argcount, Object * left, Object * right)
+{
+    register int result;
+
+    if (argcount != 2)
+        wrong_number_of_arguments ();
+
+    return (((char) left) == FIXNUM_CODE 
+             && ((char) right) == FIXNUM_CODE
+             && (result = left + right, 
+                  __no_overflow()))   // assume some sort of intrinsic
+           ? result
+           : generic_add (left, right);
+}
+</span>
+It is pretty hard to write safe, generic code in C.
+</span></pre>
+<br>
+<TABLE class=bor>
+<TR>
+	<TD>here's what Nils Goesche added</TD>
+</TR>
+</TABLE><br>
+<pre><span style="font-size:12px; font-family:courier new;line-height:1em">
+But if you really want to, you often can tell your Lisp compiler to
+omit many security checks.  For instance, in Lispworks you get
+
+CL-USER 35 ><span style="color:red"> (defun foo (left right)
+               (declare (optimize speed (safety 0) (debug 0)
+                                  (space 0) (compilation-speed 0))
+                        (fixnum left right))
+               (the fixnum (+ left right)))</span>
+FOO
+
+CL-USER 36 > (compile 'foo)
+FOO
+NIL
+NIL
+
+CL-USER 37 > (disassemble 'foo)<span style="color:green">
+2066C85A:
+       0:      55               push  ebp
+       1:      89E5             move  ebp, esp
+       3:      8B7D08           move  edi, [ebp+8]
+       6:      03C7             add   eax, edi
+       8:      FD               std   
+       9:      C9               leave 
+      10:      C20400           ret   4
+      13:      90               nop   </span>
+NIL
+</span></pre>
+<br>
+<TABLE class=bor>
+<TR>
+	<TD>here's what Duane Rettig adds (refers to the above code)</TD>
+</TR>
+</TABLE>
+<br>
+<pre><span style="font-size:12px; font-family:courier new;line-height:1em">
+This is actually pretty bad compilation - it is not tail-merging and
+is using stack for no good reason.  I suspect that
+if you use a -O option on whatever C compiler you are using,
+you will get better code.
+
+Also, I understand that the point of your post was to show how
+difficult it was to do generic coding in C, but also it is
+important to know how easy it is to do fast programming in lisp -
+the same example with a few declarations can be as fast or faster
+than the C version.  In Allegro CL:
+
+CL-USER(9):<span style="color:red"> (compile (defun foo (left right)
+                       (declare (optimize speed (safety 0) (debug 0))
+                                (fixnum left right))
+                       (+ left right)))</span>
+FOO
+NIL
+NIL
+CL-USER(10): (disassemble 'foo)<span style="color:green">
+;; disassembly of #<Function FOO>
+;; formals: LEFT RIGHT
+
+;; code start: #x714980a4:
+   0: 03 c2       addl	eax,edx
+   2: f8          clc
+   3: 8b 75 fc    movl	esi,[ebp-4]
+   6: c3          ret
+   7: 90          nop</span>
+CL-USER(11): 
+
+The extra nop is included in the code vector for alignment purposes
+only and has no bearing on execution.
+</span></pre>
+
+<br clear=all><br><hr><CENTER>quasi 2002</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,9 @@
+a{text-decoration:none;font-size:8pt}
+
+A:hover {color: red; background-color:yellow; }
+A:link {color: blue}
+A:active {color: green}
+
+H1 {color: black; font-family:"Comic Sans MS", "Courier", "Arial"};
+
+BODY {FONT-FAMILY: "tahoma", "Verdana", "Arial", "sans-serif"; FONT-SIZE: 9pt}

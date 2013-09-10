@@ -1,0 +1,11 @@
+a{text-decoration:none}
+
+A:link {color: blue}
+A:active {color: green}
+A:visited {color: #FF3399}
+
+BODY {COLOR: black; MARGIN: 20px}
+BODY {FONT-FAMILY: Verdana, Arial, sans-serif; FONT-SIZE: 11pt; LINE-HEIGHT: 14pt}
+
+H1 {color:white; font-family:Comic Sans MS, Courier, Arial;}
+H2 {color:black; font-family:comic sans ms, courier,arial;}

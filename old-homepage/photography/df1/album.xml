@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+<album>
+
+<comment>    PLEASE OPEN INDEX.HTML TO VIEW ALBUM    </comment>
+
+<label><![CDATA[t]]></label>
+
+<dirpath>t/</dirpath>
+
+<bgcolor rule="true">#000000</bgcolor>
+<linecolor>#ffffff</linecolor>
+<imgcolor>#000000</imgcolor>
+<txtcolor>#ffffff</txtcolor>
+<labels>true</labels>
+<txt>true</txt>
+<thumbs>top</thumbs>
+<thumbspacing>4</thumbspacing>
+<hidethumbs>false</hidethumbs>
+<margin>16</margin>
+<topmargin>20</topmargin>
+<imgvalignpercent>50</imgvalignpercent>
+<outline>true</outline>
+<dateinlabel>false</dateinlabel>
+<dateaslabel>false</dateaslabel>
+<addinfo>false</addinfo>
+<supersize>false</supersize>
+<typeface>default</typeface>
+<bg></bg>
+<back></back>
+<slideshow interval="4">false</slideshow>
+<txt>true</txt>
+<download>false</download>
+<bananatree bg="false" transparency="100" collapse="true">true</bananatree>
+
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010003-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:08:10</date>
+		<filesize>0.04Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1010003-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1010003-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010004-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:15:50</date>
+		<filesize>0.04Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1010004-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1010004-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010013-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:22:52</date>
+		<filesize>0.03Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1010013-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1010013-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010015-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:30:16</date>
+		<filesize>0.03Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1010015-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1010015-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010016-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:37:12</date>
+		<filesize>0.04Mbytes</filesize>
+		<format>JPEG</format>
+		<size>65mm x 43mm</size>
+		<image width="768" height="512">slides/F1010016-bw.jpg</image>
+		<thumb width="180" height="120">thumbs/F1010016-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1010021-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 14:43:00</date>
+		<filesize>0.07Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1010021-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1010021-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+
+
+
+	<slide>
+		<label><![CDATA[F1030037-bw]]></label>
+
+<txt><![CDATA[text here]]></txt>
+
+		<date>2005.06.25 15:20:48</date>
+		<filesize>0.04Mbytes</filesize>
+		<format>JPEG</format>
+		<size>43mm x 65mm</size>
+		<image width="512" height="768">slides/F1030037-bw.jpg</image>
+		<thumb width="80" height="120">thumbs/F1030037-bw.jpg</thumb>
+		
+	</slide>
+		
+	
+
+
+</album>
