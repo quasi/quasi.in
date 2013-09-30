@@ -1,5 +1,7 @@
 <html>
   <head>
+    <media charset="utf-8">
+    <media charset="viewport" content="width=device-width">
     <title>Abhijit 'quasi' Rao</title>
     <style type="text/css" media="screen">
       * {
@@ -53,14 +55,15 @@
         font-style:italic;
       }
 
-      @media all and (max-width: 480px), handheld and (orientation: portrait)
+      @media all and (max-width: 480px)
       {
         body {
-          background-image : url('bgp.jpg');          
+          background-image : url('bgp.jpg');
         }
         #info {
           width : 100%;
           border: none;
+          border-top: 5px solid black;
           border-radius: 0;
           bottom: 0;
           right: 0;
@@ -69,7 +72,7 @@
           text-shadow: 0 0 4px #000;
         }
       }
-      @media all and (min-width: 480px) and (max-width: 1024px), handheld and (orientation: landscape)
+      @media all and (min-width: 480px) and (max-width: 1024px)
       {
         body {
           background-image : url('bgs.jpg');          
